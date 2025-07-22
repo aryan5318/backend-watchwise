@@ -5,10 +5,13 @@ require('dotenv').config();
 const connectDB = require('./connectmongo');
 
 const app = express();
+
 app.use(cors({
-  origin: "https://watch-wise-qgpu.vercel.app", // Allow only your frontend
+  origin: "*", // or use specific domain
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
+
 app.use(express.json()); 
 connectDB();
 
