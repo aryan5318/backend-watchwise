@@ -6,7 +6,7 @@ const connectDB = require('./connectmongo');
 
 const app = express();
 app.use(cors({
-  origin: "http//watch-wise-qgpu.vercel.app, // Allow only your frontend
+  origin: "https://watch-wise-qgpu.vercel.app", // Allow only your frontend
   credentials: true
 }));
 app.use(express.json()); 
