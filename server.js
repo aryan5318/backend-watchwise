@@ -5,12 +5,12 @@ require('dotenv').config();
 const connectDB = require('./connectmongo');
 
 const app = express();
-
 app.use(cors({
-  origin: "*", // or use specific domain
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE"]
 }));
+
+
 
 app.use(express.json()); 
 connectDB();
